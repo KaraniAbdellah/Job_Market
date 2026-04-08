@@ -1,7 +1,6 @@
 # Import Packages
 from flask import Flask, request, jsonify
 import joblib
-import pandas as pd
 from model import fromJsonObjectToDataFrame
 
 app = Flask(__name__)

@@ -1,7 +1,4 @@
-import joblib
 import pandas as pd
-from sklearn.model_selection import train_test_split
-import numpy as np
 from sklearn.preprocessing import OneHotEncoder
 
 # Processing HERE
@@ -11,8 +8,7 @@ education_level_map = {'PhD': 3, 'Master': 2, 'Bachelor': 1, 'High School': 0}
 
 # From Json Object To DataFrame
 def fromJsonObjectToDataFrame(jsonData, all_features):
-    print(jsonData)
-    df_data = pd.DataFrame([row_dict])
+    df_data = pd.DataFrame([jsonData])
     
     # Mapping/Label Encoding This Varaibles
     df_data["company_size"] = [company_size_map.get(v) for v in df_data["company_size"]]
@@ -33,19 +29,5 @@ def fromJsonObjectToDataFrame(jsonData, all_features):
     df_data = df_data.reindex(columns=all_features, fill_value=0)
     
     return df_data
-    
-    pass
 
 
-row_dict = {
-    "country": "Switzerland",
-    "city": "Zurich",
-    "occupation": "Operations Manager",
-    "field": "Operations",
-    "years_of_experience": 16,
-    "salary": 359609.0,
-    "employment_type": "work_from_home",
-    "education_level": "Master",
-    "gender": "Male",
-    "company_size": "Large"
-}
