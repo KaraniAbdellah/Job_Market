@@ -1,22 +1,22 @@
 # Import Packages
-from fastapi import FastAPI
+from flask import Flask, request, jsonify
 import joblib
 import pandas as pd
-# import fromJsonObjectToDataFrame from "model.py"
+from model import fromJsonObjectToDataFrame
 
+app = Flask(__name__)
 
-app = FastAPI()
-
-# Load The Model
+# Load the Model
 model = joblib.load("./my_model.pkl")
-model
 all_features = model.feature_names_in_
 
-
-# Create Hello World EndPoint
-@app.get("/helloWorld")
-def helloWorld():
-    fromJsonObjectToDataFrame()
-
-
+# Define the /predict endpoint
+@app.route("/predict", methods=["POST"])
+def predictSalary():
+    data = request.get_json()  # get JSON from request body
+    print("helo from predict")
+    print(data)
+    df = fromJsonObjectToDataFrame(data, all_features)  # convert JSON to DataFrame
+    prediction = model.predict(df)
+    return jsonify({"prediction": prediction.tolist()})
 

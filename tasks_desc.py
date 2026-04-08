@@ -1,9 +1,5 @@
 # Tasks
 '''
-    Build An API
-        --> Build a Function That Accept Column andd Predict Salary
-        --> Make COlumn from Json Object
-        --> fast Apis With EndPoints (Accept: Json Object || Return: Prediction Salary)
     Build WebSite
     Power BI DashaBaord
 '''

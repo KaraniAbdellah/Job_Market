@@ -49,5 +49,3 @@ row_dict = {
     "gender": "Male",
     "company_size": "Large"
 }
-
-fromJsonObjectToDataFrame(row_dict)
