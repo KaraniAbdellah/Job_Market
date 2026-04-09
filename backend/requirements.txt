@@ -1,5 +1,7 @@
-Flask
-pandas
-numpy
-scikit-learn
+fastapi
 joblib
+requests
+uvicorn[standard]
+pydantic
+pandas
+scikit-learn
