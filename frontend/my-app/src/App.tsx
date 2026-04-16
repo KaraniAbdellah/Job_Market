@@ -7,7 +7,7 @@ import ModelInfo from "./pages/ModelInfo";
 
 function App() {
   return (
-    <div className="min-h-screen bg-gray-100 flex justify-center items-start py-6">
+    <div className="min-h-screen bg-gray-100 flex justify-center items-start py-6 px-4">
       <div className="w-full max-w-5xl bg-white border border-gray-200 rounded-xl overflow-hidden">
         <NavBar />
 
@@ -20,6 +20,17 @@ function App() {
             <Route path="/model_info" element={<ModelInfo />} />
             <Route path="/about_me" element={<AboutMe />} />
           </Routes>
+          <footer className="border-gray-200 pt-6 text-center text-sm text-gray-600">
+            <p>
+              Thanks For Your Contribution! Check{" "}
+              <a
+                href="https://github.com/KaraniAbdellah/Job_Market"
+                className="text-blue-600 hover:text-blue-800 underline"
+              >
+                GitHub
+              </a>
+            </p>
+          </footer>
         </div>
       </div>
     </div>

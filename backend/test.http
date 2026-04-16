@@ -1,0 +1,14 @@
+POST https://karani10-predict-space-salary.hf.space/predict
+Content-Type: application/json
+
+{
+    "country": "Switzerland",
+    "city": "Zurich",
+    "occupation": "Operations Manager",
+    "field": "Operations",
+    "years_of_experience": 16,
+    "employment_type": "work_from_home",
+    "education_level": "Master",
+    "gender": "Male",
+    "company_size": "Large"
+}

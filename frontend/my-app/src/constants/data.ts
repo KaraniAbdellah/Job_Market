@@ -219,4 +219,38 @@ const gender = ["Male", "Female", "Other"];
 
 const company_size = ["Large", "Enterprise", "Medium", "Small"];
 
-export { dataset_example, occupation, city, gender, education_level, company_size, employment_type, field };
+const country = [
+  "Switzerland",
+  "India",
+  "Sweden",
+  "South Korea",
+  "United States",
+  "Mexico",
+  "Australia",
+  "United Arab Emirates",
+  "France",
+  "Brazil",
+  "Canada",
+  "Spain",
+  "Italy",
+  "New Zealand",
+  "Netherlands",
+  "Singapore",
+  "Ireland",
+  "South Africa",
+  "Japan",
+  "United Kingdom",
+  "Germany",
+];
+
+export {
+  dataset_example,
+  occupation,
+  city,
+  gender,
+  education_level,
+  company_size,
+  employment_type,
+  field,
+  country,
+};
