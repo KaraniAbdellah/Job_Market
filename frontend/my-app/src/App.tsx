@@ -4,6 +4,7 @@ import DatasetPage from "./pages/DatasetPage";
 import GetPrediction from "./pages/GetPrediction";
 import AboutMe from "./pages/AboutMe";
 import ModelInfo from "./pages/ModelInfo";
+import { ToastContainer } from "react-toastify";
 
 function App() {
   return (
@@ -32,6 +33,7 @@ function App() {
             </p>
           </footer>
         </div>
+        <ToastContainer />
       </div>
     </div>
   );
